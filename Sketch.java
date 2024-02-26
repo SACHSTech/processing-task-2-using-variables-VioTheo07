@@ -1,36 +1,45 @@
 import processing.core.PApplet;
 
+/*
+ * Scaling Drawn House
+ * @author: Savio. T
+ */
+
 public class Sketch extends PApplet {
-	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
+  // Declare Variables
+  int intH = 2;
+  int intW = 2;
+
   public void settings() {
 	// put your size call here
-    size(400, 400);
+    size(500 * intW, 500 * intH);
   }
-
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
   public void setup() {
-    background(210, 255, 173);
+    background(207, 159, 255);
   }
-
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
+   
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+	
+  // Creating a House
 
-    stroke(255);
-    line(50, 125, 70, 50);  
-  }
+  // Main House Body
+  fill(255, 182, 193);
+  rect(120 * intW, 250 * intH, 200 * intW, 200 * intH);
+
+  // Door
+  fill(255, 255, 255);
+  rect(195 * intW, 350 * intH, 50 * intW, 100 * intH);
   
-  // define other methods down here.
+  // Simple Roof
+  fill(176, 215, 230);
+  triangle(120 * intW, 250 * intH, 225 * intW, 50 * intH, 320 * intW, 250 * intH);
+
+  // Window
+  fill(255, 255, 255);
+  ellipse(220 * intW, 300 * intH, 50 * intW, 50 * intH);
+
+  // Flashy Moon
+  fill(255, 255, 237);
+  circle(450 * intW, 25 * intH, 300 * 2);
+  }
 }
